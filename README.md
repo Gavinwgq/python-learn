@@ -1,2 +1,2 @@
 # python-learn
-学习pytho
+学习python
