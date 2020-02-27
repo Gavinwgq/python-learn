@@ -2,6 +2,7 @@ from bs4 import BeautifulSoup
 import requests
 import openpyxl
 
+
 # 从网页爬取数据，并保存到excel中
 def getCityLis(url):
     html = requests.get(url).text
@@ -31,6 +32,7 @@ for city in cityList:
     for item in dataList:
         jk = jk + 1
         key = item.a.get_text().strip().replace("\n", "").replace('\r', '')
+        val = ''
         if item.img is not None:
             src = item.img['src']
             if "/media/bike/img/tick.gif" == src:
